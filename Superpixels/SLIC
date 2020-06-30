@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+SLIC
+
+@author: Christian Quintanar
+"""
+
+from skimage.segmentation import slic
+from skimage.segmentation import mark_boundaries
+import matplotlib.pyplot as plt
+from PIL import Image
+import numpy as np
+
+img = Image.open("")
+img = np.asarray(img)
+
+segments = slic(img, n_segments = 100, sigma = 5)
+
+fig = plt.figure("Superpixels")
+ax = fig.add_subplot(1, 1, 1)
+ax.imshow(mark_boundaries(img, segments))
+plt.axis("off")
+plt.show()
