@@ -23,7 +23,7 @@ cluster_pic = pic2show.reshape(img.shape[0], img.shape[1], img.shape[2])
 
 plt.subplot(121)
 plt.title("Original")
-plt.imshow(img, cmap="Greys_r")
+plt.imshow(img)
 plt.subplot(122)
 plt.title("K-Means")
 plt.imshow(cluster_pic)
